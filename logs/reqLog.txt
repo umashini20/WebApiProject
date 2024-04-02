@@ -1,4 +1,25 @@
-20240402	14:19:05	af89ffa7-b9d2-4930-9ee2-9bbce62ba721	/newPage	GET
-20240402	14:19:05	eec1e5f8-5838-4834-b5a7-5937b26e262d	/css/style.css	GET
-20240402	14:19:05	1ea0eaf5-2753-497c-a950-8d957d42b26c	/img/best2.png	GET
-20240402	14:19:05	169b0fbf-0ac9-4f4b-bd09-24bba7ac77bc	/favicon.ico	GET
+20240402	20:15:56	e634b3c9-24b4-4139-9adb-d093391f938c	GET	undefined	/index
+20240402	20:15:56	91c6cf8f-c0b1-48a2-8ecf-d430d58f277b	GET	undefined	/css/style.css
+20240402	20:18:16	097ee779-4800-42fc-916d-21c4cf5a51a9	GET	undefined	/index
+20240402	20:18:17	26f4a875-e81f-4683-b583-5f54de1c48b7	GET	undefined	/css/style.css
+20240402	20:23:51	8eb39175-0330-4a02-a926-b3650f8ca9d8	GET	https://www.google.lk	/
+20240402	20:23:51	ae9cce0f-bcc4-4d13-bf85-99447bc91067	OPTIONS	https://www.google.lk	/
+20240402	20:37:45	6e56da4d-b41a-4104-8862-02a7dc50a011	GET	undefined	/index
+20240402	20:37:45	d5dd85c2-9f0c-43f9-81c0-b987c46beccb	GET	undefined	/css/style.css
+20240402	20:45:26	c8df4268-7ee6-4990-8327-4f91e0ae0db1	GET	undefined	/indexds
+20240402	20:45:26	81e0bc13-0687-41a7-9869-4b93ee677f0c	GET	undefined	/css/style.css
+20240402	20:55:53	230ae07a-91dd-428b-8f9e-dc692e2279a7	GET	undefined	/sundir/index
+20240402	20:55:53	432a5abc-7d65-4cb4-aeb7-564e8a2f5e8b	GET	undefined	/sundir/css/style.css
+20240402	20:56:08	6878169b-1a16-4d18-8619-3253882fe079	GET	undefined	/sundir
+20240402	20:56:08	49ad63f1-b7c0-4579-9cec-a64792c27650	GET	undefined	/css/style.css
+20240402	20:56:16	27de1247-9031-468d-bffe-86f5bccff3ba	GET	undefined	/subdir
+20240402	21:02:57	8ca5df1f-d52a-4774-97f3-453b93322795	GET	undefined	/
+20240402	21:02:57	f951e808-e13a-4af7-bf85-d44fd6fdd00d	GET	undefined	/css/style.css
+20240402	21:03:03	62f7ce17-5b2e-4893-acc0-53c164f2abe2	GET	undefined	/newPage
+20240402	21:03:03	e92751b8-6c07-4538-af4b-d470bf35f770	GET	undefined	/css/style.css
+20240402	21:03:03	a9001980-f1b6-4800-9cc0-f2d1ca5028bd	GET	undefined	/img/best2.png
+20240402	21:41:43	e1f67db6-b91b-443c-b2f3-fd0bf5dd6bac	GET	undefined	/weather.json
+20240402	21:41:43	e4252e02-fa52-4faf-8b18-c558b74b0763	GET	undefined	/css/style.css
+20240402	21:46:49	985face7-f245-4ac8-94b6-f7fb94ff09e0	GET	undefined	/weather
+20240402	21:49:49	fc979053-3781-4bea-8ffe-3674b0e0c287	GET	undefined	/weather/1
+20240402	21:49:58	267a84d8-3ad2-4907-b345-11c7d6338a10	POST	undefined	/weather

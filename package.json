@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/umashini20/WebApiProject#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "date-fns": "^3.6.0",
+    "express": "^4.19.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
