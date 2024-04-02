@@ -1,0 +1,4 @@
+20240402	14:19:05	af89ffa7-b9d2-4930-9ee2-9bbce62ba721	/newPage	GET
+20240402	14:19:05	eec1e5f8-5838-4834-b5a7-5937b26e262d	/css/style.css	GET
+20240402	14:19:05	1ea0eaf5-2753-497c-a950-8d957d42b26c	/img/best2.png	GET
+20240402	14:19:05	169b0fbf-0ac9-4f4b-bd09-24bba7ac77bc	/favicon.ico	GET
