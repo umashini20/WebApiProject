@@ -1,61 +1,63 @@
-const data = {
-   weather:  require('../model/weather.json'),
-   setWeather: function (data) { this.weather = data}
-};
-
-
-
-const getAllWeatherData = (req, res) => {
-    res.json(data.weather);
+const Weather = require('../model/Weather')
+const getAllWeatherData = async (req, res) => {
+   const weather = await Weather.find();
+   if(!weather) return res.status(204).json({'message': 'No weather data found'});
+   res.json(weather);
 }
 
-const createNewWeatherData = (req, res) => {
-   const newWeather = {
-        id: data.weather[data.weather.length - 1].id + 1 || 1,
-        humidity: req.body.humidity,
-        temperature: req.body.temperature,
-        airPressure: req.body.airPressure
-   }
+const createNewWeatherData = async (req, res) => {
+    if (!req?.body?.humidity || !req?.body?.temperature || !req?.body?.airPressure) {
+        return res.status(400).json({'message': 'Humidity, temperature and air pressure required'})
+    }
 
-   if (!newWeather.humidity || !newWeather.temperature || !newWeather.airPressure) {
-        return res.status(400).json({'message': 'Humidity, temperature and air pressure required'});
-   }
-
-   data.setWeather([...data.weather, newWeather]);
-   res.status(201).json(data.weather);
+    try {
+        const result = await Weather.create({
+            humidity: req.body.humidity,
+            temperature: req.body.temperature,
+            airPressure: req.body.airPressure
+        });
+        res.status(201).json(result);
+    } catch (err) {
+        console.error(err);
+    }
+   
+  
 }
 
-const updateWeatherData = (req, res) => {
-   const weather = data.weather.find(wea => wea.id === parseInt(req.body.id));
+const updateWeatherData = async (req, res) => {
+   if (!req?.body?.id) {
+        return res.status(400).json({ 'message': 'ID is required'});
+   }
+   const weather = await Weather.findOne({ _id: req.body.id}).exec();
    if (!weather) {
-        return res.status(400).json({ "message": `Weather ID ${req.body.id} not found`});
+        return res.status(204).json({ "message": `Weather ID ${req.body.id} not found`});
 
    }
-   if (req.body.humidity) weather.humidity = req.body.humidity;
-   if (req.body.temperature) weather.temperature = req.body.temperature;
-   if (req.body.airPressure) weather.airPressure = req.body.airPressure;
+   if (req.body?.humidity) weather.humidity = req.body.humidity;
+   if (req.body?.temperature) weather.temperature = req.body.temperature;
+   if (req.body?.airPressure) weather.airPressure = req.body.airPressure;
 
-   const filterArray = data.weather.filter(wea => wea.id !== parseInt(req.body.id));
-   const unsortedArray = [...filterArray, weather];
-   data.setWeather(unsortedArray.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+   const result = await weather.save();
    res.json(data.weather);
 }
 
-const deleteWeatherData = (req, res) => {
-   const weather = data.weather.find(wea => wea.id === parseInt(req.body.id));
+const deleteWeatherData =async (req, res) => {
+    if (!req?.body?.id) return res.status(400).json({ 'message': 'ID is required'});
+   
+    const weather = await Weather.findOne({ _id: req.body.id}).exec();
    if (!weather) {
-        return res.status(400).json({"message": `Weather ID ${req.body.id} not found`});
+        return res.status(204).json({"message": `Weather ID ${req.body.id} not found`});
 
    }
-   const filterArray = data.weather.filter(wea => wea.id !== parseInt(req.body.id));
-   data.setWeather([...filterArray]);
-   res.json(data.weather);
+   const result = await weather.deleteOne({ _id: req.body.id});
+   res.json(result);
 }
 
-const getWeather = (req,res) => {
-    const weather = data.weather.find(wea => wea.id === parseInt(req.params.id));
+const getWeather = async (req,res) => {
+    if (!req?.params?.id) return res.status(400).json({ 'message': 'ID is required'});
+    const weather = await Weather.findOne({ _id: req.params.id}).exec();
     if (!weather) {
-        return res.status(400).json({"message": `Weather ID ${req.body.id} not found` });
+        return res.status(204).json({"message": `Weather ID ${req.params.id} not found` });
     }
     res.json(weather);
 }
