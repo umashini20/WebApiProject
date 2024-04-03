@@ -41,3 +41,13 @@
 20240403	00:36:35	898bb236-5558-43da-b3b4-c81052799a0e	GET	undefined	/logout
 20240403	00:38:25	ec36c6e1-a838-4e1c-a45d-b3ae37a88526	GET	undefined	/refresh
 20240403	00:38:50	281f9499-acbb-472e-a386-9b0458d561c2	POST	undefined	/auth
+20240403	09:48:47	9f9624fc-e049-4b46-8262-61f354b32d52	POST	undefined	/register
+20240403	09:49:21	50f4a719-eb09-4e10-8f97-61a9c45e055d	POST	undefined	/auth
+20240403	09:50:48	22c8819a-0883-441c-ac21-a64baf850166	GET	undefined	/weather
+20240403	09:50:55	502e99f9-06cb-4138-bd4a-b9357ef5ca94	POST	undefined	/auth
+20240403	09:51:04	426998c1-0eec-4ab3-bb3c-c874b9519530	GET	undefined	/weather
+20240403	09:51:47	6fb70de8-367c-422e-a16f-afab1c3c9bfb	POST	undefined	/weather
+20240403	09:52:10	30e332a1-eb61-4128-8325-df3c20a13995	POST	undefined	/auth
+20240403	09:52:19	07a9c104-30f3-4da2-b053-1dae331e336d	POST	undefined	/weather
+20240403	09:53:10	0d79d573-905d-4960-9bb7-bb50b72771fa	POST	undefined	/auth
+20240403	09:53:22	c858f6d7-0463-4d60-9fae-aac673dbe55a	POST	undefined	/weather

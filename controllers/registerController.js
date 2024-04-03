@@ -15,7 +15,11 @@ const handleNewUser = async (req, res) => {
     if(duplicate) return res.sendStatus(409);
     try {
         const hashedpwd = await bcrypt.hash(pwd, 10);
-        const newUser = { "username": user, "password": hashedpwd};
+        const newUser = { 
+            "username": user, 
+            "roles": { "User": 2001},
+            "password": hashedpwd
+        };
         usersDB.setUsers([...usersDB.users, newUser]);
         await fsPromises.writeFile(
             path.join(__dirname,'..', 'model', 'users.json'),
