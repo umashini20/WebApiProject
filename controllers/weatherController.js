@@ -1,4 +1,5 @@
 const Weather = require('../model/Weather')
+
 const getAllWeatherData = async (req, res) => {
    const weather = await Weather.find();
    if(!weather) return res.status(204).json({'message': 'No weather data found'});
@@ -6,12 +7,15 @@ const getAllWeatherData = async (req, res) => {
 }
 
 const createNewWeatherData = async (req, res) => {
-    if (!req?.body?.humidity || !req?.body?.temperature || !req?.body?.airPressure) {
+    if (!req?.body?.district || !req?.body?.latitude || !req?.body?.longitude || !req?.body?.humidity || !req?.body?.temperature || !req?.body?.airPressure) {
         return res.status(400).json({'message': 'Humidity, temperature and air pressure required'})
     }
 
     try {
         const result = await Weather.create({
+            district: req.body.district,
+            latitude: req.body.latitude,
+            longitude: req.body.longitude,
             humidity: req.body.humidity,
             temperature: req.body.temperature,
             airPressure: req.body.airPressure
@@ -62,11 +66,37 @@ const getWeather = async (req,res) => {
     res.json(weather);
 }
 
+const getWeatherLongLat = async (req, res) => {
+    try {
+        // const { latitude, longitude } = req.query;
+        // console.log('Latitude:', latitude);
+        // console.log('Longitude:', longitude);
+
+        if (!req?.body?.latitude || !req?.body?.longitude) {
+            return res.status(400).json({ 'message': 'Latitude and longitude are required'});
+        }
+
+        const { latitude, longitude } = req.body;
+        const weather = await Weather.findOne({ latitude, longitude }).exec();
+        console.log('Weather:', weather);
+
+        if (!weather) {
+            return res.status(204).json({"message": `Weather data not found for latitude ${latitude} and longitude ${longitude}` });
+        }
+        res.json(weather);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({'message': 'Internal Server Error'});
+    }
+}
+
+
 
 module.exports = {
     getAllWeatherData,
     createNewWeatherData,
     updateWeatherData,
     deleteWeatherData,
-    getWeather
+    getWeather,
+    getWeatherLongLat
 }

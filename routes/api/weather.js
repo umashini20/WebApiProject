@@ -7,12 +7,15 @@ const verifyRoles = require('../../middleware/verifyRoles');
 
 router.route('/')
     .get(weatherController.getAllWeatherData)
+    .get(weatherController.getWeatherLongLat)
     .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.createNewWeatherData)
     .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.updateWeatherData)
     .delete(verifyRoles(ROLES_LIST.Admin), weatherController.deleteWeatherData);
 
 router.route('/:id')
     .get(weatherController.getWeather);
+
+router.post('/long-lat', weatherController.getWeatherLongLat);
 
 module.exports = router;
 
