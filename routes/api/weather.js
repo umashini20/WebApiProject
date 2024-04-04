@@ -9,11 +9,13 @@ router.route('/')
     .get(weatherController.getAllWeatherData)
     .get(weatherController.getWeatherLongLat)
     .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.createNewWeatherData)
-    .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.updateWeatherData)
     .delete(verifyRoles(ROLES_LIST.Admin), weatherController.deleteWeatherData);
 
-router.route('/:id')
+router.route('/:latitude/:longitude')
     .get(weatherController.getWeather);
+
+router.route('/:latitude/:longitude')
+    .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.updateWeatherData)
 
 router.post('/long-lat', weatherController.getWeatherLongLat);
 

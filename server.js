@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
+const Weather = require('./model/Weather');
 const PORT = process.env.PORT || 3500;
 
 
@@ -43,18 +44,6 @@ app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
 app.use('/weather', require('./routes/api/weather'));
-
-
-//route handlers
-
-// app.get('/hello(.html)?', (req, res, next) => {
-//     console.log('attempted to load hello.html');
-//     next()
-// }, (req, res) => {
-//     res.send('Hello World!');
-// })
-
-
 
 app.all('*', (req, res) => {
     res.status(404)

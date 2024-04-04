@@ -15,15 +15,15 @@ const weatherSchema = new Schema({
         required: true
     },
     humidity: {
-        type: String,
+        type: Number,
         required: true
     },
     temperature: {
-        type: String,
+        type: Number,
         required: true
     },
     airPressure: {
-        type: String,
+        type: Number,
         required: true
     },
 })
