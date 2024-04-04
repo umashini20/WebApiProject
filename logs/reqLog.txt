@@ -1663,3 +1663,5 @@
 20240404	20:30:33	8ec0e1e5-aa95-4095-906e-4e2abb8e5ff0	POST	http://localhost:3000	/auth
 20240404	20:39:05	958da4e8-745e-4314-8f82-ebf3e52cedf1	OPTIONS	http://localhost:3000	/auth
 20240404	20:39:05	13d29b93-dbc0-4319-98c3-7ff467cd685b	POST	http://localhost:3000	/auth
+20240404	21:44:55	ad57a513-3a7b-4b7c-a253-cd068c3f2f0e	OPTIONS	http://localhost:3000	/auth
+20240404	21:44:55	a526454c-b078-468f-b45d-d689cbf11129	POST	http://localhost:3000	/auth

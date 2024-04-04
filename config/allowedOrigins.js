@@ -5,6 +5,7 @@ const allowedOrigins = [
     'http://localhost:3000',
     'http://localhost:3000/weather',
     'https://spotless-hen-sari.cyclic.app',
+    'http://localhost:3000/map',
     'http://localhost:3000/login'
 ];
 
