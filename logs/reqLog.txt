@@ -1661,3 +1661,5 @@
 20240404	19:14:11	a30ea894-b1d5-41f2-8ca9-823f6c936d6a	PUT	http://localhost:3000	/weather/6.9708/80.7829
 20240404	20:30:33	3979df04-6f34-45d8-9a9a-ce1e4d0da42f	OPTIONS	http://localhost:3000	/auth
 20240404	20:30:33	8ec0e1e5-aa95-4095-906e-4e2abb8e5ff0	POST	http://localhost:3000	/auth
+20240404	20:39:05	958da4e8-745e-4314-8f82-ebf3e52cedf1	OPTIONS	http://localhost:3000	/auth
+20240404	20:39:05	13d29b93-dbc0-4319-98c3-7ff467cd685b	POST	http://localhost:3000	/auth
