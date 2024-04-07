@@ -1727,3 +1727,12 @@
 20240405	10:36:05	6c5fc181-9095-4125-9796-7a5a0eb77912	POST	undefined	/weather
 20240405	10:36:17	632cf102-432d-4a23-89eb-a654aafb8f0e	POST	undefined	/weather
 20240405	10:36:29	52c0d847-5acf-4b58-8949-a3cc66fd37e5	GET	undefined	/weather
+20240406	10:41:24	087da96c-ae56-4927-a808-be356b29d06f	GET	undefined	/
+20240406	10:41:24	e2332be2-e902-45a5-a277-d023005b6140	GET	undefined	/css/style.css
+20240406	10:41:24	9174c62d-b116-4761-8dab-a625f2a609f2	GET	undefined	/favicon.ico
+20240406	10:41:33	5d890521-a681-4df6-9cb0-9eae18d5ecf4	GET	undefined	/ugugug
+20240406	10:41:33	f31b6936-89a1-4982-9ffe-d1e7004cb4c5	GET	undefined	/favicon.ico
+20240406	10:41:36	af47e8dd-c4b5-4964-b20e-f8835ed54fd5	GET	undefined	/favicon.ico
+20240407	10:12:21	b58da7ba-ba88-4878-bdfc-22a9549f1ac9	GET	undefined	/auth
+20240407	10:12:38	fe1031c5-7ac5-44d9-a3ae-b687a6d5c657	POST	undefined	/auth
+20240407	10:12:54	e0f5758e-8942-48b3-a22d-74c801c6cd6f	GET	undefined	/auth

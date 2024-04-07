@@ -15,7 +15,7 @@ router.route('/:latitude/:longitude')
     .get(weatherController.getWeather);
 
 router.route('/:latitude/:longitude')
-    .put(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), weatherController.updateWeatherData)
+    .put(weatherController.updateWeatherData)
 
 router.post('/long-lat', weatherController.getWeatherLongLat);
 
